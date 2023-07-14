@@ -1,0 +1,28 @@
+﻿@model BMImodel_791
+@{
+    ViewData["Title"] = "Simranjeet Kaur Assignment - 1";
+}
+<h1 id="header">BMI CALCULATOR SIMRANJEET KAUR</h1>
+<p class="bg-warning p-2 rounded">
+    All fields are required.
+</p>
+<form asp-action="Index" method="post">
+    <div asp-validation-summary="All"></div>
+    <div id="weight">
+        <label asp-for="weight_791">ENTER WEIGHT IN POUNDS:</label>
+        <input asp-for="weight_791" />
+    </div>
+    <br>
+    <div>
+        <label asp-for="height_791">ENTER HEIGHT IN INCHES:</label>
+        <input asp-for="height_791" />
+    </div> <br>
+    <div>
+        <label id="BMI">YOUR BODY MASS INDEX IS:</label>
+        <input value="@ViewBag.BMI_791.ToString("0.00")" readonly>
+    </div>
+    <button type="submit" id="sub" class="btn btn-primary">Calculate BMI</button>
+    &nbsp;
+    <a asp-action="Index" class="btn btn-secondary">Clear</a>
+
+</form>
